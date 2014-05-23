@@ -2,7 +2,7 @@ import numpy as np
 
 class Layer:
 	def __init__( self, dim ):
-		self.dim = dim
+		self.ndim = dim
 		self.nodeValues = np.zeros( dim )
 		
 		self.nextLayer    = None
@@ -36,4 +36,10 @@ class Layer:
 		print ''
 	
 	# ------------------------------------------------- #
+	
+class Data:
+	def __init__( self, data ):
+		self.dataNum = data.shape[0]
+		self.dim     = data.shape[1]
+		self.data    = data
 	
